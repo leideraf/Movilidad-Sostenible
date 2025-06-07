@@ -1,0 +1,298 @@
+:root {
+    --color-principal: #4CAF50;
+    --color-complementario: #81D4FA;
+    --color-fondo: #F5F5F5;
+    --color-verde-oscuro: #388E3C;
+    --color-texto: #333333;
+    --color-error: #E57373;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-principal) !important;
+}
+
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    color: var(--color-texto) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--color-principal) !important;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-verde-oscuro);
+    border-color: var(--color-verde-oscuro);
+}
+
+.btn-success {
+    background-color: var(--color-verde-oscuro);
+    border-color: var(--color-verde-oscuro);
+    border-radius: 25px;
+}
+
+.btn-danger {
+    background-color: var(--color-error);
+    border-color: var(--color-error);
+    border-radius: 25px;
+}
+
+/* Tarjetas */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 12px 16px;
+}
+
+.form-control:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.form-control.is-invalid {
+    border-color: var(--color-error);
+}
+
+/* Sección Hero */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-principal), var(--color-complementario));
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas de características */
+.feature-card {
+    text-align: center;
+    padding: 30px;
+    height: 100%;
+}
+
+.feature-icon {
+    font-size: 48px;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de estadísticas */
+.stats-card {
+    background: linear-gradient(135deg, var(--color-principal), var(--color-verde-oscuro));
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.stats-number {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Seguimiento de rutas */
+.route-tracker {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.active-route {
+    border-left: 5px solid var(--color-principal);
+    background-color: #f8f9fa;
+}
+
+/* Secciones */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Carrusel: imagen */
+.carousel-item img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50px;
+    position: relative;
+}
+
+/* Texto inferior del carrusel */
+.carousel-text-box {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Encabezado superior izquierdo */
+.carousel-label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #2e7d32;
+    z-index: 5;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 10px;
+}
+
+/* Barras de progreso */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: var(--color-principal);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 32px;
+    }
+    
+    .hero-section p {
+        font-size: 16px;
+    }
+    
+    .stats-number {
+        font-size: 24px;
+    }
+    
+    .feature-icon {
+        font-size: 36px;
+    }
+    
+    .route-tracker {
+        padding: 20px;
+    }
+    
+    .btn-lg {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .card-body {
+        padding: 30px 20px !important;
+    }
+}
+
+/* Efectos adicionales */
+.card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Animaciones de carga */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section.active {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilos para alertas flotantes */
+.alert.position-fixed {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
